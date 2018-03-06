@@ -20,7 +20,7 @@ jobs:
            command: /home/circleci/project/node_modules/.bin/ember test
        - run:
            name: Deploy Master to Heroku
-           command: |  # this command is framework-dependent and may vary
+           command: |
              heroku git:remote -a overlook-property-group
              git push --force git@heroku.com:overlook-property-group.git HEAD:refs/heads/master
              heroku restart
