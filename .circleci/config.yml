@@ -4,6 +4,10 @@ machine:
   node:
     version: 8.2.0
 
+dependencies:
+  override:
+    - npm install
+
 jobs:
   build:
     docker:
@@ -11,8 +15,7 @@ jobs:
     steps:
       - checkout
       - run: bash .circleci/setup-heroku.sh
-      - run: bash npm install
-      - run: bash ember test
+      - run: ember test
 
 workflows:
   version: 2
