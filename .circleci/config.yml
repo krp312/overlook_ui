@@ -4,30 +4,9 @@ jobs:
   build-job:
     command: |
       ember test
-  # deploy-job:
-  #   steps:
-  #     checkout
-  #     add_ssh_keys:
-  #       fingerprints:
-  #         - "5f:9e:fd:72:09:5a:8e:1a:2f:27:2d:f2:41:ee:33:2a"
-  #     run:
-  #       name: Run Setup Script
-  #       command: bash .circleci/setup-heroku.sh
-  #     run:
-  #       name: Deploy Master to Heroku
-  #       command: |  # this command is framework-dependent and may vary
-  #         heroku git:remote -a $HEROKU_APP_NAME
-  #         git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
-  #         heroku run python manage.py deploy
-  #         heroku restart
+
 workflows:
   version: 2
   build-deploy:
     jobs:
       - build-job
-      # - deploy-jobs:  # only deploy when master successfully builds
-      #     requires:
-      #       - build-job
-      #     filters:
-      #       branches:
-      #         only: master
