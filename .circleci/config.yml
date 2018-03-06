@@ -10,11 +10,14 @@ jobs:
            fingerprints:
              - "b6:71:a2:f4:ed:88:b5:ab:da:a6:5f:0e:b2:83:20:f4"
        - run:
-           name: Run Setup Script
+           name: Run Heroku Setup Script
            command: bash .circleci/setup-heroku.sh
-       - run: npm install
-       - run: npm install phantomjs-prebuilt
-       - run: /home/circleci/project/node_modules/.bin/ember test
+       - run:
+           name: Install Node Modules
+           command: npm install && npm install phantomjs-prebuilt
+       - run:
+           name: Run Ember tests
+           command: /home/circleci/project/node_modules/.bin/ember test
        - run:
            name: Deploy Master to Heroku
            command: |  # this command is framework-dependent and may vary
