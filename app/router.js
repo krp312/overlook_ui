@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('connect');
+  this.route('portal');
 });
 
 export default Router;
