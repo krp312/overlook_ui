@@ -2,23 +2,9 @@ version: 2
 
 machine:
   node:
-    version: 8.2.0
+    version: 8.9.1
 
 dependencies:
+  post:
     - npm install
     - bower install
-
-jobs:
-  build:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - checkout
-      - run: bash .circleci/setup-heroku.sh
-      - ./node_modules/.bin/ember test
-
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
