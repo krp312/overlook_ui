@@ -5,8 +5,8 @@ machine:
     version: 8.2.0
 
 dependencies:
-  override:
     - npm install
+    - bower install
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run: bash .circleci/setup-heroku.sh
-      - run: ember test
+      - ./node_modules/.bin/ember test
 
 workflows:
   version: 2
