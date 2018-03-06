@@ -1,12 +1,11 @@
 version: 2
 jobs:
-  # jobs for building/testing go here
-  build-job:
-    command: |
-      ember test
+  build:
+    steps:
+      - run: ember test
 
 workflows:
   version: 2
   build-deploy:
     jobs:
-      - build-job
+      - build
