@@ -13,7 +13,7 @@ jobs:
            command: bash .circleci/setup-heroku.sh
        - run: echo "hello world"
        - run: npm install
-       - run: bash ./node_modules/.bin/ember test
+       - run: ember test
        - run:
            name: Deploy Master to Heroku
            command: |  # this command is framework-dependent and may vary
