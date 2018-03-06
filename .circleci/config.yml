@@ -9,7 +9,7 @@ jobs:
     docker:
       - image: buildpack-deps:trusty
     steps:
-      - run: bash $HOME/overlook_ui/.circleci/setup_heroku.sh
+      - run: bash .circleci/setup_heroku.sh
       - run: bash npm install
       - run: bash ember test
 
