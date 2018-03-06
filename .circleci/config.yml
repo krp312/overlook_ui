@@ -12,7 +12,7 @@ jobs:
            name: Run Setup Script
            command: bash .circleci/setup-heroku.sh
        - run: echo "hello world"
-       - run: bash node_modules/.bin/ember test
+       - run: bash ./node_modules/.bin/ember test
        - run:
            name: Deploy Master to Heroku
            command: |  # this command is framework-dependent and may vary
