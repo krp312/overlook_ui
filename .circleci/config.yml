@@ -10,10 +10,10 @@ jobs:
            fingerprints:
              - "b6:71:a2:f4:ed:88:b5:ab:da:a6:5f:0e:b2:83:20:f4"
        - run:
-           name: Run Heroku Setup Script
+           name: Run Heroku setup script
            command: bash .circleci/setup-heroku.sh
        - run:
-           name: Install Node Modules
+           name: Install Node modules
            command: npm install && npm install phantomjs-prebuilt
        - run:
            name: Run Ember tests
