@@ -12,9 +12,7 @@ jobs:
        - run:
            name: Run Heroku setup script
            command: bash .circleci/setup-heroku.sh
-       - run:
-           name: Install Node modules
-           command: yarn install && yarn install phantomjs-prebuilt
+       - run: npm install
        - run:
            name: Run Ember tests
            command: /home/circleci/project/node_modules/.bin/ember test
