@@ -16,5 +16,5 @@ jobs:
            name: Deploy Master to Heroku
            command: |  # this command is framework-dependent and may vary
              heroku git:remote -a overlook-property-group
-             git push --force git@heroku.com:$overlook-property-group.git HEAD:refs/heads/master
+             git push --force git@heroku.com:overlook-property-group.git HEAD:refs/heads/master
              heroku restart
