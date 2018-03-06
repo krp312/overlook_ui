@@ -14,7 +14,7 @@ jobs:
            command: bash .circleci/setup-heroku.sh
        - run: echo "hello world"
        - run: npm install
-       - run: npm install phantomjs
+       - run: npm install phantomjs-prebuilt
        - run: /home/circleci/project/node_modules/.bin/ember test
        - run:
            name: Deploy Master to Heroku
