@@ -20,7 +20,13 @@
         {{/dd.menu}}
       {{/nav.dropdown}}
       {{#nav.item}}{{#nav.link-to "index"}}SELF STORAGE{{/nav.link-to}}{{/nav.item}}
-      {{#nav.item}}{{#nav.link-to "connect"}}CONNECT{{/nav.link-to}}{{/nav.item}}
+      {{#nav.dropdown as |dd|}}
+        {{#dd.toggle}}CONNECT <span class="caret"></span>{{/dd.toggle}}
+        {{#dd.menu as |ddm|}}
+          {{#ddm.item}}{{#ddm.link-to "index"}}ABOUT US{{/ddm.link-to}}{{/ddm.item}}
+          {{#ddm.item}}{{#ddm.link-to "connect"}}CONTACT US{{/ddm.link-to}}{{/ddm.item}}
+        {{/dd.menu}}
+      {{/nav.dropdown}}
       {{#nav.item}}{{#nav.link-to "connect"}}PORTAL LOGIN{{/nav.link-to}}{{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
