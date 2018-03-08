@@ -5,29 +5,29 @@
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
       {{#nav.dropdown as |dd|}}
-        {{#dd.toggle}}RESIDENTIAL <span class="caret"></span>{{/dd.toggle}}
-        {{#dd.menu as |ddm|}}
-          {{#ddm.item}}{{#ddm.link-to "index"}}NJ PROPERTIES{{/ddm.link-to}}{{/ddm.item}}
-          {{#ddm.item}}{{#ddm.link-to "connect"}}PA PROPERTIES{{/ddm.link-to}}{{/ddm.item}}
-          {{#ddm.item}}{{#ddm.link-to "connect"}}COMMUNITIES{{/ddm.link-to}}{{/ddm.item}}
-        {{/dd.menu}}
+        {{#dd.toggle}}RESIDENTIAL{{/dd.toggle}}
+          {{#dd.menu as |ddm|}}
+            {{#ddm.item}}{{#ddm.link-to "index"}}NJ PROPERTIES{{/ddm.link-to}}{{/ddm.item}}
+            {{#ddm.item}}{{#ddm.link-to "connect"}}PA PROPERTIES{{/ddm.link-to}}{{/ddm.item}}
+            {{#ddm.item}}{{#ddm.link-to "connect"}}COMMUNITIES{{/ddm.link-to}}{{/ddm.item}}
+          {{/dd.menu}}
       {{/nav.dropdown}}
       {{#nav.dropdown as |dd|}}
-        {{#dd.toggle}}COMMERCIAL <span class="caret"></span>{{/dd.toggle}}
-        {{#dd.menu as |ddm|}}
-          {{#ddm.item}}{{#ddm.link-to "index"}}FACILITIES{{/ddm.link-to}}{{/ddm.item}}
-          {{#ddm.item}}{{#ddm.link-to "connect"}}VACANCIES{{/ddm.link-to}}{{/ddm.item}}
-        {{/dd.menu}}
+        {{#dd.toggle}}COMMERCIAL{{/dd.toggle}}
+          {{#dd.menu as |ddm|}}
+            {{#ddm.item}}{{#ddm.link-to "connect"}}FACILITIES{{/ddm.link-to}}{{/ddm.item}}
+            {{#ddm.item}}{{#ddm.link-to "connect"}}VACANCIES{{/ddm.link-to}}{{/ddm.item}}
+          {{/dd.menu}}
       {{/nav.dropdown}}
-      {{#nav.item}}{{#nav.link-to "index"}}SELF STORAGE{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "connect"}}SELF STORAGE{{/nav.link-to}}{{/nav.item}}
       {{#nav.dropdown as |dd|}}
-        {{#dd.toggle}}CONNECT <span class="caret"></span>{{/dd.toggle}}
-        {{#dd.menu as |ddm|}}
-          {{#ddm.item}}{{#ddm.link-to "index"}}ABOUT US{{/ddm.link-to}}{{/ddm.item}}
-          {{#ddm.item}}{{#ddm.link-to "connect"}}CONTACT US{{/ddm.link-to}}{{/ddm.item}}
-        {{/dd.menu}}
+        {{#dd.toggle}}CONNECT{{/dd.toggle}}
+          {{#dd.menu as |ddm|}}
+            {{#ddm.item}}{{#ddm.link-to "index"}}ABOUT US{{/ddm.link-to}}{{/ddm.item}}
+            {{#ddm.item}}{{#ddm.link-to "connect"}}CONTACT US{{/ddm.link-to}}{{/ddm.item}}
+          {{/dd.menu}}
       {{/nav.dropdown}}
-      {{#nav.item}}{{#nav.link-to "connect"}}PORTAL LOGIN{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}{{#nav.link-to "portal"}}PORTAL LOGIN{{/nav.link-to}}{{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
 {{/bs-navbar}}

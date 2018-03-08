@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'eaves'; /*a name to be used later*/
-    src: url('fonts/Verlag-Book.otf'); /*URL to font*/
+  font-family: 'verlag'; /*a name to be used later*/
+  src: url('fonts/Verlag-Book.otf'); /*URL to font*/
 }
 
 body {
-    font-family: 'eaves';
+  font-family: 'verlag';
 }
